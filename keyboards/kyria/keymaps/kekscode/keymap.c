@@ -58,10 +58,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  *                        `----------------------------------'  `----------------------------------'
  */
     [_LOWER] = LAYOUT(
-      _______, KC_EXLM, KC_AT,   KC_LCBR, KC_RCBR, KC_PIPE,                                     _______, _______, _______, _______, _______, KC_BSLS,
-      _______, KC_HASH, KC_DLR,  KC_LPRN, KC_RPRN, KC_GRV,                                      KC_PLUS, KC_MINS, KC_SLSH, KC_ASTR, KC_PERC, KC_QUOT,
-      _______, KC_PERC, KC_CIRC, KC_LBRC, KC_RBRC, KC_TILD, _______, _______, _______, _______, KC_AMPR, KC_EQL,  KC_COMM, KC_DOT,  KC_SLSH, KC_MINS,
-                                 _______, _______, _______, KC_SCLN, KC_EQL,  KC_EQL,  KC_SCLN, _______, _______, _______
+     KC_ESC, KC_EXLM, KC_AT, KC_HASH, KC_DLR, KC_PERC,                                          KC_CIRC, KC_AMPR, KC_ASTR, KC_MINS, KC_PLUS, KC_DEL,
+     KC_NO, KC_NO, KC_UNDS, KC_LCBR, KC_LPRN, KC_QUOT,                                          KC_DQUO, KC_RPRN, KC_RCBR, KC_MINS, KC_PIPE, KC_ENT,
+     KC_LSFT, KC_NO, KC_NO, KC_LT, KC_LBRC, KC_TILD,                                            KC_GRV, KC_RBRC, KC_GT, KC_NO, KC_BSLS, KC_LSFT, 
+                     KC_LCTL, KC_LALT, KC_LGUI, KC_SPC, KC_NO,                 KC_NO, KC_SPC, KC_VOLD, KC_VOLU, LCTL(KC_BSLS)
     ),
 /*
  * Raise Layer: Number keys, media, navigation
