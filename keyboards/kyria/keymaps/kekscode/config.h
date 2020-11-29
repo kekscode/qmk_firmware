@@ -28,7 +28,7 @@
   #define RGBLIGHT_VAL_STEP 8
 #endif
 
-// #define RETRO_TAPPING
+#define RETRO_TAPPING_PER_KEY
 
 // If you are using an Elite C rev3 on the slave side, uncomment the lines below:
 // #define SPLIT_USB_DETECT
