@@ -11,11 +11,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [_QWERTY] = LAYOUT(
       KC_ESC, KC_Q, KC_W, KC_E, KC_R, KC_T,                                                              KC_Y, KC_U, KC_I, KC_O, KC_P, KC_BSPC,
       LT(_RAISE, KC_TAB), KC_A, KC_S, KC_D, KC_F, KC_G,                                                  KC_H, KC_J, KC_K, KC_L, KC_SCLN, KC_ENT,
-      KC_LSFT, KC_Z, KC_X, KC_C, KC_V, KC_B, SGUI(KC_5), KC_NO,                     KC_VOLD, KC_VOLU, KC_N, KC_M, KC_COMM, KC_DOT, KC_SLSH, KC_LSFT,
+      KC_LSFT, KC_Z, KC_X, KC_C, KC_V, KC_B, SGUI(KC_5), LGUI(LCTL(KC_Q)),                     KC_VOLD, KC_VOLU, KC_N, KC_M, KC_COMM, KC_DOT, KC_SLSH, KC_LSFT,
            KC_LCTL, KC_LALT, LT(_LOWER, KC_SPC), KC_LGUI, LT(_ADJUST, KC_F1),          LT(_ADJUST, KC_F1), KC_LGUI, LT(_LOWER, KC_SPC), KC_NO, LCTL(KC_BSLS)
     ),
     [_LOWER] = LAYOUT(
-     KC_ESC, KC_EXLM, KC_AT, KC_HASH, KC_DLR, KC_PERC,                                          KC_CIRC, KC_AMPR, KC_ASTR, KC_MINS, KC_PLUS, KC_DEL,
+     KC_ESC, KC_EXLM, KC_AT, KC_HASH, KC_DLR, KC_PERC,                                           KC_CIRC, KC_AMPR, KC_ASTR, KC_MINS, KC_PLUS, KC_DEL,
      KC_TAB, KC_NO, KC_UNDS, KC_LCBR, KC_LPRN, KC_QUOT,                                          KC_DQUO, KC_RPRN, KC_RCBR, KC_MINS, KC_PIPE, KC_ENT,
      KC_LSFT, KC_NO, KC_NO, KC_LT, KC_LBRC, KC_TILD, KC_NO, KC_NO,             KC_NO, KC_NO, KC_GRV, KC_RBRC, KC_GT, KC_NO, KC_BSLS, KC_LSFT, 
                      KC_LCTL, KC_LALT, KC_LGUI, KC_SPC, KC_NO,                 KC_NO, KC_SPC, KC_VOLD, KC_VOLU, LCTL(KC_BSLS)
