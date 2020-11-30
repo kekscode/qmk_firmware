@@ -12,7 +12,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
       KC_ESC, KC_Q, KC_W, KC_E, KC_R, KC_T,                                                 KC_Y, KC_U, KC_I, KC_O, KC_P, KC_BSPC,
       LT(_RAISE, KC_TAB), KC_A, KC_S, KC_D, KC_F, KC_G,                                     KC_H, KC_J, KC_K, KC_L, KC_SCLN, KC_ENT,
       KC_LSFT, KC_Z, KC_X, KC_C, KC_V, KC_B, SGUI(KC_5), LGUI(LCTL(KC_Q)),                  KC_NO, KC_NO, KC_N, KC_M, KC_COMM, KC_DOT, KC_SLSH, KC_LSFT,
-           KC_LALT, KC_LCTL, LT(_LOWER, KC_SPC), KC_LGUI, LT(_ADJUST, KC_F1),          LT(_ADJUST, KC_F1), KC_LGUI, LT(_LOWER, KC_SPC), KC_LCTL, LCTL(KC_BSLS) 
+           KC_LALT, KC_LCTL, LT(_LOWER, KC_SPC), KC_LGUI, LT(_ADJUST, KC_F1),          LT(_ADJUST, KC_F1), KC_LGUI, LT(_LOWER, KC_SPC), LCTL(KC_BSLS), KC_LEAD
     ),
     [_LOWER] = LAYOUT(
      KC_ESC, KC_EXLM, KC_AT, KC_HASH, KC_DLR, KC_PERC,                                           KC_CIRC, KC_AMPR, KC_ASTR, KC_MINS, KC_PLUS, KC_DEL,
@@ -33,6 +33,30 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                                  _______, _______, _______, _______, _______, _______, KC_VOLD, _______, _______, _______
     ),
 };
+
+
+bool is_alt_tab_active = false;
+uint16_t alt_tab_timer = 0;
+
+LEADER_EXTERNS();
+
+void matrix_scan_user(void) {
+    if (is_alt_tab_active) {
+        if (timer_elapsed(alt_tab_timer) > 1000) {
+            unregister_code(KC_LGUI);
+            is_alt_tab_active = false;
+        }
+    }
+
+    LEADER_DICTIONARY() {
+        leading = false;
+        leader_end();
+
+        SEQ_TWO_KEYS(KC_Y, KC_S) { // Greeting
+            SEND_STRING("Best regards,\n\n");
+        }
+    }
+}
 
 bool get_retro_tapping(uint16_t keycode, keyrecord_t *record) {
     switch (keycode) {

@@ -30,6 +30,14 @@
 
 #define RETRO_TAPPING_PER_KEY
 
-// If you are using an Elite C rev3 on the slave side, uncomment the lines below:
-#define SPLIT_USB_DETECT
-#define NO_USB_STARTUP_CHECK
+// The Leader key allows to flexibly assign macros to key sequences.
+#define LEADER_PER_KEY_TIMING
+#define LEADER_TIMEOUT 600 
+
+// Fine tune tapping term
+#define TAPPING_TERM 200
+
+// Allows to use either side as the master. Look at the documentation for info:
+// https://docs.qmk.fm/#/config_options?id=setting-handedness
+// Essentially: The eeprom has to be flashed with the files for left/right hand
+#define EE_HANDS
