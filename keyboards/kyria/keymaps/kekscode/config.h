@@ -28,11 +28,9 @@
   #define RGBLIGHT_VAL_STEP 8
 #endif
 
-#define RETRO_TAPPING_PER_KEY
-
 // The Leader key allows to flexibly assign macros to key sequences.
 #define LEADER_PER_KEY_TIMING
-#define LEADER_TIMEOUT 600 
+#define LEADER_TIMEOUT 600
 
 // Fine tune tapping term
 #define TAPPING_TERM 200

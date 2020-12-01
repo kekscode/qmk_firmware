@@ -58,15 +58,6 @@ void matrix_scan_user(void) {
     }
 }
 
-bool get_retro_tapping(uint16_t keycode, keyrecord_t *record) {
-    switch (keycode) {
-        case LT(_RAISE, KC_TAB):
-            return true;
-        default:
-            return false;
-    }
-}
-
 #ifdef OLED_DRIVER_ENABLE
 oled_rotation_t oled_init_user(oled_rotation_t rotation) {
 	return OLED_ROTATION_180;
