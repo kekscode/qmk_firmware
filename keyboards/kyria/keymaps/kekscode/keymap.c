@@ -21,9 +21,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                      KC_LCTL, KC_LALT, KC_LGUI, KC_SPC, KC_NO,                 KC_NO, KC_SPC, KC_VOLD, KC_VOLU, KC_LALT
     ),
     [_RAISE] = LAYOUT(
-            KC_NO, KC_LEFT, KC_UP, KC_NO, KC_NO, KC_NO,                                  KC_PLUS, KC_7, KC_8, KC_9, KC_DEL, KC_BSPC,
-            KC_NO, KC_PGUP, KC_DOWN, KC_RGHT, KC_NO, KC_NO,                                 KC_EQL, KC_4, KC_5, KC_6, KC_ASTR, KC_ENT,
-            KC_LSFT, KC_NO, KC_NO, KC_PGDN, KC_NO, KC_NO, KC_NO, KC_NO,       KC_NO, KC_NO, KC_MINS, KC_1, KC_2, KC_3, KC_SLSH, KC_LSFT,
+            KC_NO, KC_PGUP, KC_UP, KC_PGDN, KC_NO, KC_NO,                                  KC_PLUS, KC_7, KC_8, KC_9, KC_DEL, KC_BSPC,
+            KC_NO, KC_LEFT, KC_DOWN, KC_RGHT, KC_NO, KC_NO,                                 KC_EQL, KC_4, KC_5, KC_6, KC_ASTR, KC_ENT,
+            KC_LSFT, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO,       KC_NO, KC_NO, KC_MINS, KC_1, KC_2, KC_3, KC_SLSH, KC_LSFT,
                             KC_LCTL, KC_LALT, KC_LGUI, KC_SPC, KC_NO,           KC_NO, KC_SPC, KC_0, KC_COMM, KC_DOT
     ),
     [_ADJUST] = LAYOUT(
